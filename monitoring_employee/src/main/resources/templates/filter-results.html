@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>Filter Survey Results</title>
+</head>
+<body>
+<form action="/filter" method="POST">
+    <label for="filterBy">Filter By:</label>
+    <select id="filterBy" name="filterBy">
+        <option value="department">Department</option>
+        <option value="team">Team</option>
+        <option value="employee">Employee</option>
+    </select>
+    <label for="value">Value:</label>
+    <input type="text" id="value" name="value">
+    <input type="submit" value="Filter">
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Survey Results Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}"/>
+</head>
+<body>
+<h1>Survey Results Dashboard</h1>
+<table>
+    <tr>
+        <th>Employee</th>
+        <th>Department</th>
+        <th>Role</th>
+        <th>Designation</th>
+        <th>Happiness</th>
+        <th>Satisfaction</th>
+        <th>Date</th>
+    </tr>
+    <tr th:each="survey : ${surveys}">
+        <td th:text="${survey.employee.name}"></td>
+        <td th:text="${survey.department}"></td>
+        <td th:text="${survey.role}"></td>
+        <td th:text="${survey.designation}"></td>
+        <td th:text="${survey.happiness}"></td>
+        <td th:text="${survey.satisfaction}"></td>
+        <td th:text="${survey.date}"></td>
+    </tr>
+</table>
+</body>
+</html>

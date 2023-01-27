@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>Filter Survey Results</title>
+</head>
+<body>
+<form action="/filter" method="POST">
+    <label for="employee">Select Employee:</label>
+    <select id="employee" name="employee">
+        <option th:each="employee : ${employees}" th:value="${employee.id}" th:text="${employee.name}"></option>
+    </select>
+    <input type="submit" value="Filter">
+</form>
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Filter Survey Results</title>-->
+<!--    <link rel="stylesheet" href="styles.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <h1>Filter Survey Results</h1>-->
+<!--    <form method="post" action="/filter">-->
+<!--        <label for="department">Department:</label>-->
+<!--        <select id="department" name="department">-->
+<!--            <option value=""></option>-->
+<!--            <option th:each="department : ${departments}" th:value="${department}" th:text="${department}"></option>-->
+<!--        </select>-->
+<!--        <label for="team">Team:</label>-->
+<!--        <select id="team" name="team">-->
+<!--            <option value=""></option>-->
+<!--            <option th:each="team : ${teams}" th:value="${team}" th:text="${team}"></option>-->
+<!--        </select>-->
+<!--        <label for="employee">Employee:</label>-->
+<!--        <select id="employee" name="employee">-->
+<!--            <option value=""></option>-->
+<!--            <option th:each="employee : ${employees}" th:value="${employee.id}" th:text="${employee.name}"></option>-->
